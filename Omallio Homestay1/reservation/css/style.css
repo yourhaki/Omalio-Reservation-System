@@ -1,0 +1,842 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
+
+:root {
+  --main-color: #white;
+  --sub-color: #00a86b;
+  --white: #fff;
+  --border: 0.1rem solid rgba(220, 198, 156, 0.3);
+}
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+*::selection {
+  background-color: var(--sub-color);
+  color: var(--main-color);
+}
+
+*::-webkit-scrollbar {
+  height: 0.5rem;
+  width: 1rem;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--sub-color);
+  border-radius: 5rem;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+}
+
+body {
+  background-color: var(--main-color);
+  /* padding-bottom: 7.5rem; */
+}
+
+section {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  padding: 1rem 3rem;
+  border: var(--border);
+  font-size: 1.8rem;
+  color: var(--white); /* Set text color to white */
+  text-align: center;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+  margin-top: 1rem;
+  background-color: #00a86b; /* Set the green color */
+}
+
+.btn:hover,
+.btn:active {
+  border-radius: 5rem;
+  background-color: #00a86b; /* Set the same green color on hover and click */
+  color: var(--white);
+}
+
+.header {
+  padding-bottom: 0;
+}
+
+.header .flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.header .flex .logo {
+  color: var(--sub-color);
+  font-size: 2.5rem;
+}
+
+.header .flex .btn {
+  margin-top: 0;
+}
+
+.header .flex .fa-bars {
+  font-size: 3rem;
+  cursor: pointer;
+  color: var(--sub-color);
+  display: none;
+}
+
+.header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  background-color: var(--sub-color);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.header .navbar a {
+  font-size: 1.8rem;
+  color: var(--main-color);
+  padding: 1rem 3rem;
+  border-radius: 0.5rem;
+}
+
+.header .navbar a:hover {
+  background-color: var(--main-color);
+  color: var(--sub-color);
+}
+
+.home .box img {
+  border-radius: 0.5rem;
+  height: 60vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.home .box .flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.home .box .flex h3 {
+  font-size: 2.5rem;
+  color: var(--sub-color);
+  text-transform: capitalize;
+}
+
+.swiper-button-prev {
+  left: 0%;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  padding: 3rem 2rem;
+  background-color: var(--white);
+  top: 40%;
+  opacity: 0.7;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: var(--main-color);
+  font-size: 2rem;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  opacity: 1;
+}
+
+.availability form {
+  background-color: rgba(255, 255, 255, 0.99); /* White with 90% opacity */
+  padding: 2rem;
+  border: var(--border);
+}
+
+  .availability form .flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .availability form .flex .box {
+    flex: 1 1 20rem;
+  }
+
+  .availability form .flex .box p {
+    font-size: 2rem;
+    color: var(--sub-color);
+  }
+
+  .availability form .flex .box .input,
+  .availability form .flex .box select {
+    width: 80%;
+    padding: 1rem;
+    font-size: 1.8rem;
+    background-color: var(--sub-color);
+    color: var(--white);
+    border: none;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+  }
+
+.availability form .flex .box input[type='date']::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+/* Dropdown button styling */
+
+.dropdown p {
+  color: #00a86b; /* Green color */
+  font-size: 1.6rem; /* Adjust the font size if needed */
+  margin-bottom: 10px; /* Space below the text */
+}
+
+.dropdown .dropdown-btn {
+  /* Your existing button styling goes here */
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.8rem;
+  background-color: var(--sub-color);
+  color: var(--white);
+  border: none;
+  margin-top: 0.5rem;
+  margin-right: 2rem;
+  margin-left: 10;
+  border-radius: 0.5rem;
+  font-size: 1.8rem; /* Font size */
+  border: var(--border); /* Border style */
+  text-align: center;
+  border-radius: 0.5rem; /* Rounded corners */
+  width: auto;
+}
+
+/* Styling for the dropdown content */
+.dropdown .dropdown-content {
+  display: none; /* Hide content initially */
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Styling for items inside the dropdown */
+.dropdown .dropdown-content p {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+/* Show the dropdown when the button is clicked */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Close button styling */
+.dropdown .close-btn {
+  background-color: #f44336; /* Red color for close button */
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Optional: Add some hover effects */
+.dropdown .dropdown-btn:hover {
+  background-color: #007b5e; /* Darker green */
+}
+
+.dropdown .close-btn:hover {
+  background-color: #d32f2f; /* Darker red */
+}
+
+
+.availability form .flex .box .btn:hover,
+.availability form .flex .box .btn:active {
+  background-color: #008c5a; /* Darker green on hover or active */
+}
+
+.availability form .flex .box .btn:focus {
+  outline: none; /* Removes focus outline */
+}
+
+
+/* Make the dropdown visible when the button is clicked */
+.availability form .flex .box .dropdown-content.show {
+  display: flex;
+}
+
+/* Style for each option inside the dropdown */
+.availability form .flex .box .dropdown-content p {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--sub-color);
+}
+
+/* Buttons to increase/decrease numbers */
+.availability form .flex .box .dropdown-content button {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  margin: 0 0.5rem;
+}
+
+.availability form .flex .box .dropdown-content button:disabled {
+  background-color: var(--gray-color); /* Disabled button styling */
+  cursor: not-allowed;
+}
+
+/* Close button inside the dropdown */
+.availability form .flex .box .dropdown-content .close-btn {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: 1rem;
+  font-size: 1.8rem;
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+
+.availability form .flex .box .btn:hover,
+.availability form .flex .box .btn:active {
+  background-color: #008c5a; /* Darker green on hover or active */
+}
+
+.availability form .flex .box select,
+.availability form .flex .box .input {
+  box-sizing: border-box; /* Ensures padding and border are included in the width */
+}
+
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.room {
+  flex: 1;
+  max-width: 30%;
+  text-align: center;
+  margin: 1rem;
+}
+
+.room h1 {
+  font-size: 2rem;
+  color: var(--sub-color);
+}
+
+.room .image img {
+  width: 100%;
+  height: 200px; /* Adjust the height as needed for consistency */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.room .content {
+  margin-top: 1rem;
+}
+
+.room .content p {
+  font-size: 1.6rem;
+  color: var(--sub-color);
+}
+
+.room .content .btn {
+  margin-top: 1rem;
+  margin-bottom: 20px;
+}
+
+.services .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.services .box-container .box {
+  padding: 2rem;
+  text-align: center;
+}
+
+.services .box-container .box img {
+  height: 7rem;
+  margin-bottom: 1rem;
+}
+
+.services .box-container .box h3 {
+  font-size: 2rem;
+  color: var(--sub-color);
+  text-transform: capitalize;
+  margin: 1rem 0;
+}
+
+.services .box-container .box p {
+  line-height: 2;
+  font-size: 1.5rem;
+  color: var(--sub-color);
+}
+
+.reservation form {
+  border: var(--border);
+  padding: 2rem;
+}
+
+.reservation form .flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.reservation form h3 {
+  background-color: var(--sub-color);
+  color: var(--main-color);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  padding: 1.2rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.reservation form .flex .box {
+  flex: 1 1 40rem;
+}
+
+.reservation form .flex .box p {
+  font-size: 1.8rem;
+  color: var(--sub-color);
+}
+
+.reservation form .flex .box .input {
+  padding: 1rem 0;
+  margin: 1rem 0;
+  border-bottom: var(--border);
+  background: var(--main-color);
+  color: var(--#238151);
+  font-size: 1.8rem;
+  width: 100%;
+}
+
+.reservation form .flex .box .input::placeholder {
+  color: #00A86B(220, 198, 156, 0.6);
+}
+
+.reservation
+  form
+  .flex
+  .box
+  input[type='date']::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+.gallery h3 {
+  font-size: 2.5rem;
+  color: var(--sub-color);
+}
+
+.gallery img {
+  height: 40rem;
+  width: 60rem;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  margin-bottom: 4rem;
+  user-select: none;
+  margin-top: 4%;
+}
+
+h2 {
+  font-size: 3rem; /* Adjust the font size as needed */
+  color: #00a86b; /* Set the green color */
+  margin-bottom: 30px;
+}
+
+.container iframe {
+  width: 390%;
+  height: 500px;
+  border: 0;
+  margin-bottom: 20px;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 0;
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--sub-color);
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--white);
+}
+
+.faqs .row form h3 {
+  border-radius: 0.5rem;
+  padding: 1.2rem;
+  color: black; /* Change to black */
+  background-color: var(--sub-color);
+  font-size: 2.2rem;
+  text-transform: capitalize;
+}
+
+.faqs .row form .box {
+  padding: 2rem 0;
+  margin: 1rem 0;
+  border-bottom: var(--border);
+  font-size: 1.8rem;
+  color: black; /* Change to black */
+  background: var(--main-color);
+  width: 100%;
+}
+
+.faqs .row form .box::placeholder {
+  color: rgba(0, 0, 0, 0.6); /* Change to black */
+}
+
+.faqs .row form textarea {
+  height: 15rem;
+  resize: none;
+  color: black; /* Change to black */
+}
+
+.faqs .row .faq .title {
+  padding-bottom: 0.5rem;
+  font-size: 2.5rem;
+  color: var(--sub-color);
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.faqs .row .faq .box {
+  border-radius: 0.5rem;
+  border: var(--border);
+  margin-top: 2rem;
+}
+
+.faqs .row .faq .box h3 {
+  background-color: var(--sub-color);
+  color: var(--main-color);
+  padding: 1.5rem;
+  font-size: 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.faqs .row .faq .box p {
+  padding: 1.5rem 2rem;
+  line-height: 2;
+  font-size: 1.6rem;
+  color: var(--sub-color);
+  display: none;
+}
+
+.faqs .row .faq .box.active p {
+  display: inline-block;
+}
+
+.reviews {
+  padding-top: 50px; /* Add top padding */
+}
+
+.reviews h3 {
+  font-size: 3rem; /* Increase the font size */
+  color: #00a86b; /* Set the text color to green */
+  text-align: center; /* Center the text */
+  text-transform: uppercase; /* Optionally make the text uppercase */
+  margin-bottom: 2rem; /* Add some bottom margin */
+}
+
+.reviews {
+  padding-top: 0;
+}
+
+.reviews .box {
+  text-align: center;
+  user-select: none;
+  padding: 2rem;
+  margin-bottom: 4rem;
+}
+
+.reviews .box img {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.reviews .box h3 {
+  margin: 1.5rem 0;
+  font-size: 2rem;
+  color: var(--sub-color);
+}
+
+.reviews .box p {
+  line-height: 2;
+  font-size: 1.5rem;
+  color: var(--sub-color);
+}
+
+.bookings .heading {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--sub-color);
+  font-size: 2.5rem;
+  text-transform: capitalize;
+}
+
+.bookings .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 35rem);
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.bookings .box-container .box {
+  border-radius: 0.5rem;
+  padding: 2rem;
+  padding-top: 1rem;
+  border: var(--border);
+}
+
+.bookings .box-container .box p {
+  line-height: 1.5;
+  padding-top: 0.5rem;
+  font-size: 1.8rem;
+  color: var(#000);
+}
+
+.bookings .box-container .box p span {
+  color: var(#000);
+}
+.footer {
+  color: #000;
+}
+
+.footer .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: flex-start;
+  padding-bottom: 3rem;
+}
+
+.footer .box-container .box a {
+  display: block;
+  font-size: 1.8rem;
+  color: var(--sub-color);
+  padding: 1rem 0;
+}
+
+.footer .box-container .box a:hover {
+  color: var(--white);
+}
+
+.footer .box-container .box:first-child i {
+  margin-right: 1.7rem;
+}
+
+.footer .box-container .box:nth-child(2) {
+  text-align: center;
+}
+
+.footer .box-container .box:last-child {
+  text-align: right;
+}
+
+.footer .box-container .box:last-child i {
+  margin-left: 1.7rem;
+}
+
+.footer .credit {
+  border-radius: 0.5rem;
+  padding: 2rem;
+  text-align: center;
+  color: var(--main-color);
+  background-color: var(--sub-color);
+  font-size: 2rem;
+  /* margin-bottom: 8rem; */
+}
+
+
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-btn {
+  padding: 10px;
+  width: 150px;
+  background-color: #00a875;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.dropdown-btn:hover {
+  background-color: #00885c;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  top: 45px;
+  left: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1000;
+}
+
+.dropdown-content p {
+  margin: 0;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown-content button {
+  background-color: #00a875;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.dropdown-content button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.dropdown-content .close-btn {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  padding: 5px;
+  background-color: #00a875;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* media queries  */
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  .header .flex .fa-bars {
+    display: inline-block;
+  }
+
+  .header .flex .btn {
+    display: none;
+  }
+
+  .header .navbar {
+    flex-flow: column;
+    padding: 2rem;
+    display: none;
+  }
+
+  .header .navbar.active {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .home .box img {
+    height: 40vh;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: 35%;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .header .flex .logo {
+    font-size: 2rem;
+  }
+
+  .home .box img {
+    height: 25rem;
+  }
+
+  .about .row .image img {
+    width: 100%;
+  }
+
+  .gallery img {
+    height: 25rem;
+    width: 30rem;
+  }
+
+  .bookings .box-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .availability form .flex {
+    flex-direction: column;
+  }
+
+  .availability form .flex .box {
+    flex: 1 1 100%;
+  }
+}
